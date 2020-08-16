@@ -1,7 +1,7 @@
 const lost = require('lost')
 const pxtorem = require('postcss-pxtorem')
 
-const url = 'https://lumen.netlify.com'
+const url = 'https://amirbraham.netlify.com'
 
 module.exports = {
   siteMetadata: {
@@ -9,7 +9,7 @@ module.exports = {
     siteUrl: url,
     title: 'Blog by John Doe',
     subtitle:
-      'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+        'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
     copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
@@ -20,6 +20,10 @@ module.exports = {
       {
         label: 'About me',
         path: '/about/',
+      },
+      {
+        label: 'Bookshelf',
+        path: '/bookshelf/',
       },
       {
         label: 'Contact me',
@@ -60,16 +64,15 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) =>
-              allMarkdownRemark.edges.map(edge =>
-                Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.description,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.url + edge.node.fields.slug,
-                  guid: site.siteMetadata.url + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
-                })
-              ),
+            serialize: ({query: {site, allMarkdownRemark}}) =>
+                allMarkdownRemark.edges.map(
+                    edge => Object.assign({}, edge.node.frontmatter, {
+                      description: edge.node.frontmatter.description,
+                      date: edge.node.frontmatter.date,
+                      url: site.siteMetadata.url + edge.node.fields.slug,
+                      guid: site.siteMetadata.url + edge.node.fields.slug,
+                      custom_elements: [{'content:encoded': edge.node.html}],
+                    })),
             query: `
               {
                 allMarkdownRemark(
@@ -112,7 +115,7 @@ module.exports = {
           },
           {
             resolve: 'gatsby-remark-responsive-iframe',
-            options: { wrapperStyle: 'margin-bottom: 1.0725rem' },
+            options: {wrapperStyle: 'margin-bottom: 1.0725rem'},
           },
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
@@ -124,7 +127,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',
-      options: { trackingId: 'UA-73379983-2' },
+      options: {trackingId: 'UA-73379983-2'},
     },
     {
       resolve: 'gatsby-plugin-google-fonts',
