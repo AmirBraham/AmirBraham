@@ -37,7 +37,6 @@ export const pageQuery = graphql`
         author {
           name
         }
-        disqusShortname
         url
       }
     }

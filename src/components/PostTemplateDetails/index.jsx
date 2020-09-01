@@ -1,14 +1,13 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import moment from 'moment'
-import Disqus from '../Disqus/Disqus'
-import './style.scss'
+import React from "react";
+import { Link } from "gatsby";
+import moment from "moment";
+import "./style.scss";
 
 class PostTemplateDetails extends React.Component {
   render() {
-    const { subtitle, author } = this.props.data.site.siteMetadata
-    const post = this.props.data.markdownRemark
-    const tags = post.fields.tagSlugs
+    const { subtitle, author } = this.props.data.site.siteMetadata;
+    const post = this.props.data.markdownRemark;
+    const tags = post.fields.tagSlugs;
 
     const homeBlock = (
       <div>
@@ -16,7 +15,7 @@ class PostTemplateDetails extends React.Component {
           All Articles
         </Link>
       </div>
-    )
+    );
 
     const tagsBlock = (
       <div className="post-single__tags">
@@ -31,16 +30,7 @@ class PostTemplateDetails extends React.Component {
             ))}
         </ul>
       </div>
-    )
-
-    const commentsBlock = (
-      <div>
-        <Disqus
-          postNode={post}
-          siteMetadata={this.props.data.site.siteMetadata}
-        />
-      </div>
-    )
+    );
 
     return (
       <div>
@@ -55,7 +45,7 @@ class PostTemplateDetails extends React.Component {
             />
             <div className="post-single__date">
               <em>
-                Published {moment(post.frontmatter.date).format('D MMM YYYY')}
+                Published {moment(post.frontmatter.date).format("D MMM YYYY")}
               </em>
             </div>
           </div>
@@ -72,12 +62,11 @@ class PostTemplateDetails extends React.Component {
                 <br /> <strong>{author.name}</strong> on Twitter
               </a>
             </p>
-            {commentsBlock}
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default PostTemplateDetails
+export default PostTemplateDetails;
