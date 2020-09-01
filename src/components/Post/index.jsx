@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from "gatsby";
 import moment from "moment";
 import "./style.scss";
+import _ from "lodash";
 
 class Post extends React.Component {
   render() {
-    const { title, date, description } = this.props.data.node.frontmatter;
+    const { title, date, description, tags } = this.props.data.node.frontmatter;
     const { slug } = this.props.data.node.fields;
-
+    console.log(tags);
     return (
       <div className="post">
         <div className="post__meta">
@@ -24,6 +25,17 @@ class Post extends React.Component {
             {title}
           </Link>
         </h2>
+        <div className="post__tags">
+          {tags.map((tag) => (
+            <Link
+              key={tag}
+              to={`/tags/${_.kebabCase(tag)}`}
+              className="post__tags-link"
+            >
+              {tag}
+            </Link>
+          ))}
+        </div>
         <p className="post__description">{description}</p>
         <Link className="post__readmore" to={slug}>
           Read
