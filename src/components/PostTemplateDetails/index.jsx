@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import moment from "moment";
 import "./style.scss";
-
+import { getReadingTime } from "../../utilities/readingTime";
 class PostTemplateDetails extends React.Component {
   render() {
     const { subtitle, author } = this.props.data.site.siteMetadata;
@@ -17,6 +17,11 @@ class PostTemplateDetails extends React.Component {
       </div>
     );
 
+    const readingTime = (
+      <div className="post-single__readingtime">
+        <span>Reading time : {`${getReadingTime(post.html)}`} minutes</span>
+      </div>
+    );
     const tagsBlock = (
       <div className="post-single__tags">
         <ul className="post-single__tags-list">
@@ -38,6 +43,7 @@ class PostTemplateDetails extends React.Component {
         <div className="post-single">
           <div className="post-single__inner">
             <h1 className="post-single__title">{post.frontmatter.title}</h1>
+            {readingTime}
             <div
               className="post-single__body"
               /* eslint-disable-next-line react/no-danger */

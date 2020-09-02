@@ -8,7 +8,6 @@ class Post extends React.Component {
   render() {
     const { title, date, description, tags } = this.props.data.node.frontmatter;
     const { slug } = this.props.data.node.fields;
-    console.log(tags);
     return (
       <div className="post">
         <div className="post__meta">
