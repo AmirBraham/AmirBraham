@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PostTemplateDetails from "../components/PostTemplateDetails";
+import ScrollProgressRead from "react-scroll-progress-read";
 
 class PostTemplate extends React.Component {
   render() {
@@ -13,6 +14,10 @@ class PostTemplate extends React.Component {
 
     return (
       <Layout>
+        <div style={{ position: "fixed", width: "100%", zIndex: 1000 }}>
+          <ScrollProgressRead height="5px" />
+        </div>
+
         <div>
           <Helmet>
             <title>{`${postTitle} - ${title}`}</title>
