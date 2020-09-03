@@ -14,7 +14,7 @@ class Post extends React.Component {
       <div className="post__readingtime">
         <span>
           Reading time :{" "}
-          {`${readingTime} ${readingTime == 1 ? "minute" : "minutes"}`}{" "}
+          {`${readingTime} ${readingTime === 1 ? "minute" : "minutes"}`}{" "}
         </span>
       </div>
     );

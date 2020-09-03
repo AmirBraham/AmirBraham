@@ -22,7 +22,7 @@ class PostTemplateDetails extends React.Component {
       <div className="post-single__readingtime">
         <span>
           Reading time :{" "}
-          {`${readingTime} ${readingTime == 1 ? "minute" : "minutes"}`}{" "}
+          {`${readingTime} ${readingTime === 1 ? "minute" : "minutes"}`}{" "}
         </span>
       </div>
     );
