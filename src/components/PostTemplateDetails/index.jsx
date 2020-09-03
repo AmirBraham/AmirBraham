@@ -16,10 +16,14 @@ class PostTemplateDetails extends React.Component {
         </Link>
       </div>
     );
+    const readingTime = getReadingTime(post.html);
 
-    const readingTime = (
+    const readingTimeComponent = (
       <div className="post-single__readingtime">
-        <span>Reading time : {`${getReadingTime(post.html)}`} minutes</span>
+        <span>
+          Reading time :{" "}
+          {`${readingTime} ${readingTime == 1 ? "minute" : "minutes"}`}{" "}
+        </span>
       </div>
     );
     const tagsBlock = (
@@ -43,7 +47,7 @@ class PostTemplateDetails extends React.Component {
         <div className="post-single">
           <div className="post-single__inner">
             <h1 className="post-single__title">{post.frontmatter.title}</h1>
-            {readingTime}
+            {readingTimeComponent}
             <div
               className="post-single__body"
               /* eslint-disable-next-line react/no-danger */

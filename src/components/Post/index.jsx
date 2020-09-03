@@ -3,11 +3,21 @@ import { Link } from "gatsby";
 import moment from "moment";
 import "./style.scss";
 import _ from "lodash";
-
+import { getReadingTime } from "../../utilities/readingTime";
 class Post extends React.Component {
   render() {
+    const { html } = this.props.data.node;
     const { title, date, description, tags } = this.props.data.node.frontmatter;
     const { slug } = this.props.data.node.fields;
+    const readingTime = getReadingTime(html);
+    const readingTimeComponent = (
+      <div className="post__readingtime">
+        <span>
+          Reading time :{" "}
+          {`${readingTime} ${readingTime == 1 ? "minute" : "minutes"}`}{" "}
+        </span>
+      </div>
+    );
     return (
       <div className="post">
         <div className="post__meta">
@@ -24,6 +34,7 @@ class Post extends React.Component {
             {title}
           </Link>
         </h2>
+        {readingTimeComponent}
         <div className="post__tags">
           {tags.map((tag) => (
             <Link

@@ -11,7 +11,6 @@ class IndexRoute extends React.Component {
     const { title, subtitle } = this.props.data.site.siteMetadata;
     const posts = this.props.data.allMarkdownRemark.edges;
     posts.forEach((post) => {
-      console.log(post);
       items.push(<Post data={post} key={post.node.fields.slug} />);
     });
 
@@ -62,6 +61,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          html
           frontmatter {
             title
             tags
