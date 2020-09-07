@@ -21,8 +21,7 @@ class PostTemplateDetails extends React.Component {
     const readingTimeComponent = (
       <div className="post-single__readingtime">
         <span>
-          Reading time :{" "}
-          {`${readingTime} ${readingTime === 1 ? "minute" : "minutes"}`}{" "}
+          {`${readingTime} ${readingTime === 1 ? "minute" : "minutes"} read`}
         </span>
       </div>
     );
@@ -63,12 +62,21 @@ class PostTemplateDetails extends React.Component {
             {tagsBlock}
             <hr />
             <p className="post-single__footer-text">
+              <br />
+              Share this post on :{" "}
               <a
                 href={`https://twitter.com/${author.twitter}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <br /> <strong>{author.name}</strong> on Twitter
+                Facebook
+              </a>
+              <a
+                href={`https://twitter.com/${author.twitter}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Twitter
               </a>
             </p>
           </div>

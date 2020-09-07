@@ -3,8 +3,9 @@ import get from "lodash/get";
 import { Link } from "gatsby";
 import Menu from "../Menu";
 import Links from "../Links";
-import profilePic from "../../pages/photo.jpg";
 import "./style.scss";
+import _ from "lodash";
+import { StaticQuery, graphql } from "gatsby";
 
 class Sidebar extends React.Component {
   render() {
@@ -15,15 +16,6 @@ class Sidebar extends React.Component {
     /* eslint-disable jsx-a11y/img-redundant-alt */
     const authorBlock = (
       <div>
-        <Link to="/">
-          <img
-            src={profilePic}
-            className="sidebar__author-photo"
-            width="75"
-            height="75"
-            alt={author.name}
-          />
-        </Link>
         {isHomePage ? (
           <h1 className="sidebar__author-title">
             <Link className="sidebar__author-title-link" to="/">
@@ -47,6 +39,33 @@ class Sidebar extends React.Component {
           <div className="sidebar__author">{authorBlock}</div>
           <div>
             <Menu data={menu} />
+            <StaticQuery
+              query={graphql`
+                query allTags {
+                  allMarkdownRemark {
+                    group(field: frontmatter___tags) {
+                      tag: fieldValue
+                      totalCount
+                    }
+                  }
+                }
+              `}
+              render={(data) => {
+                console.log("data : ", data);
+                const tags = data.allMarkdownRemark.group;
+                return (
+                  <ul className="sidebar__tags">
+                    {tags.map(({ tag, totalCount }, key) => (
+                      <li key={key}>
+                        <Link to={`/tags/${_.kebabCase(tag)}`}>
+                          {tag} ({totalCount})
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                );
+              }}
+            />
             <Links data={author} />
             <p className="sidebar__copyright">{copyright}</p>
           </div>
