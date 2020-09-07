@@ -15,7 +15,7 @@ class PostTemplate extends React.Component {
     return (
       <Layout>
         <div style={{ position: "fixed", width: "100%", zIndex: 1000 }}>
-          <ScrollProgressRead height="5px" />
+          <ScrollProgressRead barColor="black" height="4px" />
         </div>
 
         <div>
