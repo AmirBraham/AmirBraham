@@ -7,17 +7,16 @@ import ScrollProgressRead from "react-scroll-progress-read";
 
 class PostTemplate extends React.Component {
   render() {
-    const { title, subtitle } = this.props.data.site.siteMetadata;
+    const { title } = this.props.data.site.siteMetadata;
     const post = this.props.data.markdownRemark;
     const { title: postTitle, description: postDescription } = post.frontmatter;
-    const description = postDescription !== null ? postDescription : subtitle;
+    const description = postDescription !== null ? postDescription : null;
 
     return (
       <Layout>
         <div style={{ position: "fixed", width: "100%", zIndex: 1000 }}>
           <ScrollProgressRead barColor="black" height="4px" />
         </div>
-
         <div>
           <Helmet>
             <title>{`${postTitle} - ${title}`}</title>
@@ -37,7 +36,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        subtitle
         copyright
         author {
           name

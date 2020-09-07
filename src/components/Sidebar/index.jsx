@@ -1,21 +1,16 @@
-import React from 'react'
-import get from 'lodash/get'
-import { Link } from 'gatsby'
-import Menu from '../Menu'
-import Links from '../Links'
-import profilePic from '../../pages/photo.jpg'
-import './style.scss'
+import React from "react";
+import get from "lodash/get";
+import { Link } from "gatsby";
+import Menu from "../Menu";
+import Links from "../Links";
+import profilePic from "../../pages/photo.jpg";
+import "./style.scss";
 
 class Sidebar extends React.Component {
   render() {
-    const { location } = this.props
-    const {
-      author,
-      subtitle,
-      copyright,
-      menu,
-    } = this.props.data.site.siteMetadata
-    const isHomePage = get(location, 'pathname', '/') === '/'
+    const { location } = this.props;
+    const { author, copyright, menu } = this.props.data.site.siteMetadata;
+    const isHomePage = get(location, "pathname", "/") === "/";
 
     /* eslint-disable jsx-a11y/img-redundant-alt */
     const authorBlock = (
@@ -42,9 +37,8 @@ class Sidebar extends React.Component {
             </Link>
           </h2>
         )}
-        <p className="sidebar__author-subtitle">{subtitle}</p>
       </div>
-    )
+    );
     /* eslint-enable jsx-a11y/img-redundant-alt */
 
     return (
@@ -58,8 +52,8 @@ class Sidebar extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Sidebar
+export default Sidebar;

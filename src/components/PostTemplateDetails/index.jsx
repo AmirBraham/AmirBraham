@@ -5,7 +5,7 @@ import "./style.scss";
 import { getReadingTime } from "../../utilities/readingTime";
 class PostTemplateDetails extends React.Component {
   render() {
-    const { subtitle, author } = this.props.data.site.siteMetadata;
+    const { author } = this.props.data.site.siteMetadata;
     const post = this.props.data.markdownRemark;
     const tags = post.fields.tagSlugs;
 
@@ -63,7 +63,6 @@ class PostTemplateDetails extends React.Component {
             {tagsBlock}
             <hr />
             <p className="post-single__footer-text">
-              {subtitle}
               <a
                 href={`https://twitter.com/${author.twitter}`}
                 target="_blank"

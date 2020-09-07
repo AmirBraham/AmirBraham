@@ -8,8 +8,6 @@ module.exports = {
     url,
     siteUrl: url,
     title: "Blog by Amir Braham",
-    subtitle:
-      "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
     copyright: "© All rights reserved.",
     menu: [
       {
@@ -32,7 +30,7 @@ module.exports = {
     author: {
       name: "Amir Braham",
       email: "amirbrahamm@gmail.com",
-      github: "http://github.com/amirbraham",
+      github: "amirbraham",
     },
   },
   plugins: [
