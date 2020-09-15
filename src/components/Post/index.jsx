@@ -13,7 +13,7 @@ class Post extends React.Component {
     const readingTimeComponent = (
       <div className="post__readingtime">
         <span>
-          {`${readingTime} ${readingTime === 1 ? "minute" : "minutes"} read` }
+          {`${readingTime} ${readingTime === 1 ? "min" : "mins"} read`}
         </span>
       </div>
     );

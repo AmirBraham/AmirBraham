@@ -25,8 +25,9 @@
   &__tags {
     list-style-type: none;
     padding-left: 0;
-
+    height: 100%;
     li {
+      padding-left: 0;
       float: left;
       font-size: $typographic-base-font-size * 0.825;
     }
