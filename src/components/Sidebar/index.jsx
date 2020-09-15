@@ -51,7 +51,6 @@ class Sidebar extends React.Component {
                 }
               `}
               render={(data) => {
-                console.log("data : ", data);
                 const tags = data.allMarkdownRemark.group;
                 return (
                   <ul className="sidebar__tags">
