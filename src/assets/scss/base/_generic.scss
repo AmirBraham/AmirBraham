@@ -17,6 +17,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.dark-mode {
+  background-color: $color-background-dark !important;
+}
 
 h1,
 h2,
@@ -26,6 +29,9 @@ h5,
 h6 {
   font-family: $typographic-font-family;
   font-weight: 500;
+  .dark-mode & {
+    color: $color-dark;
+  }
 }
 
 h1 {
@@ -99,6 +105,13 @@ hr {
   width: 100px;
 }
 
+span,
+time {
+  .dark-mode & {
+    color: $color-dark !important;
+  }
+}
+
 a {
   color: $typographic-link-p-font-color;
   text-decoration: none;
@@ -106,6 +119,9 @@ a {
   &:focus,
   &:active {
     color: $typographic-link-s-font-color;
+  }
+  .dark-mode & {
+    color: $color-dark;
   }
 }
 
@@ -121,11 +137,17 @@ ul {
     padding: 0 5px;
     margin-bottom: 10px;
   }
+  .dark-mode & {
+    color: $color-dark;
+  }
 }
 
 p {
   @include line-height(1);
   @include margin-bottom(1);
+  .dark-mode & {
+    color: $color-dark;
+  }
 }
 
 blockquote {
