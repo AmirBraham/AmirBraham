@@ -42,11 +42,10 @@ function Sidebar(props) {
     <div className="sidebar">
       <div className="sidebar__inner">
         <div className="sidebar__author">{authorBlock}</div>
-        <button onClick={() => handleTheme("dark")}>
-          {darkMode.value ? "switch to light" : "switch to dark"}
-        </button>
+
         <div>
           <Menu data={menu} />
+
           <StaticQuery
             query={graphql`
               query allTags {
@@ -74,6 +73,12 @@ function Sidebar(props) {
             }}
           />
           <Links data={author} />
+          <a
+            className="menu__list-item-link menu__list-item-link menu"
+            onClick={handleTheme}
+          >
+            {(darkMode.value ? "Light" : "Dark") + " theme"}
+          </a>
           <p className="sidebar__copyright">{copyright}</p>
         </div>
       </div>

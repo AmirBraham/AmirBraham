@@ -122,6 +122,12 @@ a {
   }
   .dark-mode & {
     color: $color-dark;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-dark-hover;
+      border-bottom: 0.5px solid $color-dark-hover;
+    }
   }
 }
 

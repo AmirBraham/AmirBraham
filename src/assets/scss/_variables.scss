@@ -12,8 +12,9 @@ $color-gray: lighten($color-base, 40%);
 $color-gray-border: lighten($color-base, 77%);
 $color-gray-bg: lighten($color-base, 79%);
 
-$color-dark: #f5f5f5;
-$color-background-dark: #161616;
+$color-dark: #eeeeeeea;
+$color-dark-hover: rgb(255, 255, 255);
+$color-background-dark: #212121;
 // Typographic
 $typographic-font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial",
   sans-serif;

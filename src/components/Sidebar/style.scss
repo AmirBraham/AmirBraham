@@ -49,9 +49,10 @@
         background: linear-gradient(
           to bottom,
           $color-gray-border 0%,
-          $color-gray-border 48%,
-          $color-white 100%
+          $color-gray-border 20%,
+          $color-white 80%
         );
+
         position: absolute;
         content: "";
         width: 1px;
@@ -59,6 +60,14 @@
         top: 30px;
         right: -10px;
         bottom: 0;
+        .dark-mode & {
+          background: linear-gradient(
+            to bottom,
+            $color-gray-border 0%,
+            $color-gray-border 50%,
+            rgba(243, 243, 243, 0.151) 100%
+          );
+        }
       }
     }
   }

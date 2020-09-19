@@ -96,6 +96,16 @@
             background: darken($color-gray-bg, 5%);
             border: 0;
           }
+          .dark-mode & {
+            background: lighten($color-background-dark, 10%);
+            color: lighten($color-dark, 20%);
+            &:hover,
+            &:focus {
+              color: $color-dark-hover;
+              background: darken($color-background-dark, 5%);
+              border: 0;
+            }
+          }
         }
       }
     }
@@ -112,6 +122,16 @@
     text-align: center;
     color: lighten($color-base, 20%);
     background: $color-gray-bg;
+    .dark-mode & {
+      background: lighten($color-background-dark, 10%);
+      color: lighten($color-dark, 20%);
+      &:hover,
+      &:focus {
+        color: $color-dark-hover;
+        background: darken($color-background-dark, 5%);
+        border: 0;
+      }
+    }
     font-weight: 400;
     border-radius: 3px;
     @include margin-top(1);
