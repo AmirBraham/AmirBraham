@@ -1,32 +1,16 @@
 ---
-title: Upgraded to Gatsby v2
-date: "2018-10-18T16:51:00.000Z"
+title: Quotes
+date: "2021-07-09T22:14:17+00:00"
 layout: post
 draft: false
-path: "/posts/upgraded-to-gatsby-v2/"
+path: "/posts/quotes"
 tags:
-  - "Gatsby"
-  - "Web Development"
-description: "This starter has been forked and upgraded to Gatsby v2"
+  - "Quotes"
+description: "quotes to live by"
 ---
 
-This is a Gatsby v2 compatible version of the
-[lumen](https://github.com/alxshelepenok/gatsby-starter-lumen) starter, started
-by the folks at [Gatsby Central](https://www.gatsbycentral.com/).
+- He who innovates will have for his enemies all those who are well off under the existing order of things, and only lukewarm supporters in those who might be better off under the new... partly from the incredulity of mankind, who will never admit the merit of anything new, until they have seen it proved by the event. - **Machiavelli**
 
-Here's a little recommended reading for Gatsby v2.
+- Today, the people who make things change, the people who have that knowledge, are the scientists and the technologists, who are the true driving force of humanity. And before you say what about the Beethovens and the Michelangelos? Let me suggest something with which you may disagree violently: that at best, the products of human emotion, art, philosophy, politics, music, literature, are interpretations of the world, that tell you more about the guy who's talking, than about the world he's talking about. Second hand views of the world, made third hand by your interpretation of them. - **James Burke**
 
-- First, [what's new in v2](https://www.gatsbycentral.com/whats-new-in-gatsby-v2)
-- Next, [when should I upgrade?](https://www.gatsbycentral.com/when-should-i-upgrade-to-gatsby-v2)
-- [The Gatsby v2 announcement blog post](https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/)
-
-If you **do decide to upgrade**, these articles will help you do that.
-
-- [Getting started with Gatsby v2](https://www.gatsbycentral.com/getting-started-with-gatsby-v2)
-- [Should I rebuild my site for Gatsby v2?](https://www.gatsbycentral.com/should-i-rebuild-my-site-for-gatsby-v2)
-- [How do layouts work in Gatsby v2](https://www.gatsbycentral.com/how-do-layouts-work-in-gatsby-v2)
-- [StaticQuery in Gatsby v2](https://www.gatsbycentral.com/staticquery-in-gatsby-v2)
-
-Finally, here's a cheat sheet we prepared to help during the upgrade:
-
-- [Gatsby v2 refactoring cheat sheet](https://www.gatsbycentral.com/gatsby-v2-refactoring-cheat-sheet)
+- Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma — which is living with the results of other people’s thinking. Don’t let the noise of other’s opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary. — **Steve Jobs**
